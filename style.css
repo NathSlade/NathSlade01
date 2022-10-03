@@ -1,45 +1,30 @@
-.navbar {
-    background-color: #17678E;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#hero2 {
-    background-color: #122F50;
-}
-.hero1-div {
-    background-color: #f7f7f7;
-}
-.text-primary:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
-.footer p {
-    font-size: 1.2em;
-}
-.footer p:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-#check {
-    font-size: 0.8em;
-}
-.btn{
-    background-color: #DB3A5F;
-}
-.btn:hover {
-    background-color: #c91f47;
-}
-.bg-blue {
-    background-color: #122F50;
-}
-.d-block .d-flex #color-white {
-    fill: #fff;
+body {
+    background: linear-gradient(225deg, #274c46, #20403b);
+    display: flex !important;
+    justify-content: center !important;
 }
 
-.navbar-nav {
+.grade-div {
     display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.grade-div .sub-body {
+    /* margin: 50px; */
+    height: 500px;
+    width: 300px;
+    /* width: 80%;  */
+    border-radius: 45px;
+    background: linear-gradient(225deg, #274c46, #20403b);
+    box-shadow:  -35px 35px 62px #142824, 35px -35px 62px #34665e;
 }

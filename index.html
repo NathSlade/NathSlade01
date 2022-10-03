@@ -1,278 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codepip</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-    </style>
-</head>
-<body class="bg-light">
-  <nav class="navbar navbar-expand-lg p-2" id="header">
-    <div class="container-fluid">
-      <a class="navbar-brand ms-3" href="#"><img src="./Codepip-logo.svg" alt="" width="150px"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active text-light fw-bold mx-3" aria-current="page" href="#">Games</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light fw-bold mx-3" href="#">Plans</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-light mx-3" href="#">Blog</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-light mx-3" href="#"><span style="margin-right: 20px;">Log in</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-light mx-3" href="#"><span style="margin-right: 20px;">Sign up</span></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grading System</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="grade-div">
+            <div class="sub-body">
+                <div class="rounded-5 w-75 m-auto mt-5 mb-3 border border-success p-3">
+                    <h6 class="text-center text-success fw-bold">Welcome to My Grading Page!</h6>
+                </div>
+                <p class="text-center p-2 text-success mx-4">Kindly enter your score below and click on the check button to check your grade.
+                </p>
+                <hr>
 
-  <div class="container rounded border my-5">
-    <div class="row rounded">
-      <div class="col-xsm-12 col-lg-6 p-5 bg-white" id="hero">
+                <div class="input-group m-auto w-75 pt-3">
+                    <div class="input-group mb-3">
+                      <input type="number" class="form-control" placeholder="Enter your score..." aria-label="Recipient's username" aria-describedby="button-addon2" id="userScore">
+                      <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="checkGrade()">Check</button>
+                    </div>
+                </div>
+                <input type="text" class="form-control text-success text-center w-50 mx-auto mb-5" disabled value="See Grade Here" aria-label="Your Result" aria-describedby="button-addon2" id="gradeResult">
 
-        <form class="mt-0 ms-3 me-5">
-          <h3 class="text-dark fs-4 fw-bold"> Register New Account</h3><br><br>
-          <div class="mb-3">
-            <label for="exampleInputUsername1">Username</label>
-            <input type="text" class="form-control" id="exampleInputUsername">
-          </div>
-          <div>
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">You'll need to verify your email address</div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password Again</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-        </form>
-
-        <h4 class="mt-5 ms-3 me-5">Choose Your Plan</h4>
-
-        <div class="hero1-div p-4 border col-xsm-12 me-5 ms-3 mt-4">  
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-            <label class="form-check-label" for="flexRadioDefault2">
-              Basic-free
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-              Pro Monthly- $6.00
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-            <label class="form-check-label" for="flexRadioDefault3">
-              Pro Annual-$49.00
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
-            <label class="form-check-label" for="flexRadioDefault4">
-              Pro Lifetime-$99.00
-            </label>
-          </div><div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
-            <label class="form-check-label" for="flexRadioDefault5">
-              Pro Group Monthly-$3.00 Per Seat
-            </label>
-          </div><div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
-            <label class="form-check-label" for="flexRadioDefault6">
-              Pro Group Annual-$24.00 Per Seat
-            </label>
-          </div>
-        </div>
-
-        <h4 class="ms-3 mt-5 me-5">Membership Amount</h4>
-
-        <div class="ms-3 me-5 mt-5 Basic-free" style="line-height: 0%;"><P>Basic <span
-          style="float: right;">free</span></p><hr>
-          <p style="line-height: 0%;"><b>Total Today</b><span style="float: right;"> free</span></p>
-        </div>
-
-        <div class="pt-5 mt-4 me-5 ms-3">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
-            <label class="form-check-label" for="flexCheckDefault1" id="check">
-              I agree to the terms and conditions
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
-            <label class="form-check-label" for="flexCheckDefault2" id="check">
-              I want to get emails about news and games and exclusive offers
-            </label>
-          </div>
-          <a href="" class="btn mt-5 w-100 text-white"><b>Register</b></a>
-        </div>
-
-        <div class="ms-3 me-5 mt-4 text-center"><p>Already have an account? <span class="text-primary">Log in.</span></p></div>
-
-      </div>
-
-      <div class="col-xsm-12 col-lg-6 p-5" id="hero2">
-
-        <h3 class="text-white">Basic Plan</h3>
-        <div class="d-block text-white">
-          <div class="d-flex mt-4">
-            <div><img src="./check.svg" alt="" width="40px"></div>
-            <div>
-              <h5>Free Games</h5>
-              <p>Play free games that introduce the latest coding topics.</p></div>
-          </div>
-          <div class="d-flex">
-            <div><img src="./check.svg" alt="" width="40px"></div>
-            <div>
-              <h5>Checkpoints</h5>
-              <p>Save your progress and access it from anywhere.</p>
+                <footer class="w-100 mt-5">
+                    <p class="text-success text-center">
+                        Copyright&copy Raiden_Claude
+                    </p>
+                </footer>
             </div>
-          </div>
-          <div class="d-flex">
-            <div><img src="./check.svg" alt="" width="40px"></div>
-            <div>
-              <h5>Achievements</h5>
-              <p>Track and share your in-game achievements.</p>
-            </div>
-          </div>
         </div>
 
-        <h3 class="text-white">Pro Plans</h3>
-        <div class="d-block text-white">
-          <div class="d-flex">
-            <div><div><img src="./check.svg" alt="" width="40px"></div></div>
-            <div>
-              <h5>Pro Games</h5>
-              <p>Play premium games that help you achieve mastery.</p>
-            </div>
-          </div>
-          <div class="d-flex">
-            <div><div><img src="./check.svg" alt="" width="40px"></div></div>
-            <div>
-              <h5>Solution Guides</h5>
-              <p>Access detailed explanations for educators or stumped students.</p>
-            </div>
-          </div>
-          <div class="d-flex">
-            <div><div><img src="./check.svg" alt="" width="40px"></div></div>
-            <div>
-              <h5>No Ads</h5>
-            <p>Hide ads and play distraction-free.</p>
-            </div>
-          </div>
-        </div>
+        <script>
+            function checkGrade() {
+                var scoreOfUser = userScore.value
+                var songFail = new Audio ("failure.mp3")
+                var songFail2 = new Audio ("e-shock-you.mp3")
+                var songPass = new Audio ("end-up.mp3")
+                var songExcellent = new Audio ("excellent.mp3")
 
-        <h3 class="text-white">Group Plans</h3>
-        <div class="d-block text-white">
-          <div class="d-flex">
-            <div><img src="./check.svg" alt="" width="40px"></div>
-            <div>
-              <h5>Classroom Management</h5>
-              <p>All of the above, plus register and manage other users</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="bg-blue bd-footer">
-    <div class="container">
-      <div class="row">
-        <div class="w-100 vh-90"><a href="#"><img src="./Codepip-logo.svg" alt="" width="130px" class="my-5 pt-5"></a></div>
-      <div class="row footer">
-        <div class="text-white col-6 col-md-3 col-lg-2 my-4">
-          <p><b>CODEPIP</b></p>
-          <p>About Us</p>
-          <p>Blog</p>
-          <p>Pricing</p>
-          <p>Curriculum</p>
-          <p>Press</p>
-        </div>
-
-        <div class="text-white col-6 col-md-3 col-lg-2  my-4">
-          <p><b>FEATURES</b></p>
-          <p>Games</p>
-          <p>Individual Plans</p>
-          <p>Group Plans</p>
-          <p>Classroom</p>
-        </div>
-
-        <div class="text-white col-6 col-md-3 col-lg-2  my-4">
-          <p><b>SUPPORT</b></p>
-          <p>FAQ</p>
-          <p>Contact Us</p>
-          <p>Privacy Policy</p>
-          <p>Terms of Service</p>
-        </div>
-        
-        <div class="text-white col-6 col-md-3 col-lg-2  my-4">
-          <p><b>FOLLOW</b></p>
-          <div class="d-flex">
-            <div><img src="./twitter.svg" alt="" width="25px"></div>
-            <p class="ms-2">Twitter</p>
-          </div>
-          <div class="d-flex">
-            <div><img src="./facebook.svg" alt="" width="25px"></div>
-            <p class="ms-2">Facebook</p>
-          </div>
-          <div class="d-flex">
-            <div><img src="./instagram.svg" alt="" width="25px"></div>
-            <p class="ms-2">Instagram</p>
-          </div>
-          <div class="d-flex">
-            <div><img src="./linkedin.svg" alt="" width="25px"></div>
-            <p class="ms-2">LinkedIn</p>
-          </div>
-          <div class="d-flex">
-            <div><img src="./youtube.svg" alt="" width="25px"></div>
-            <p class="ms-2">YouTube</p>
-          </div>
-          <div class="d-flex">
-            <div><img src="./rss2.png" alt="" width="25px"></div>
-            <p class="ms-2">RSS</p>
-          </div>
-        </div>
-        <div class="text-white col-xxsm-12 col-md-12 col-lg-4 d-block my-4">
-          <p><b>LATEST</b></p>
-          <p>Reach your resources with Pathfinder, a game of constructing file paths</p>
-          <p>Treat yourself to selectors with CSS Scoops</p>
-          <p>Organize emoji with Disarray, a coding game about JavaScript array methods</p>
-          <p>Dig deep about the :nth-child() selector with our newest CSS game, Nth Cart</p>
-        </div>
-
-        <div class="text-white col-xxsm-12 col-md-12 col-lg-12 my-4">
-          <p class="fs-6">&copy;2022 Codepip.All rights reserved.</p><img src="./" alt="">
-        </div>
-
-      </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-</body>
+                if (scoreOfUser=="") {
+                    gradeResult.value = "No Input"
+                }
+                else if(scoreOfUser>=0 && scoreOfUser<40){
+                    gradeResult.value = "F - Fail 🥴"
+                    songFail2.play()
+                    songFail.play()
+                }
+                else if(scoreOfUser>=40 && scoreOfUser<45){
+                    gradeResult.value = "E - Pass 😔"
+                    songPass.play()
+                }
+                else if(scoreOfUser>=45 && scoreOfUser<50){
+                    gradeResult.value = "D - Average 😬"
+                }
+                else if(scoreOfUser>=50 && scoreOfUser<60){
+                    gradeResult.value = "C - Credit 🤔"
+                }
+                else if(scoreOfUser>=60 && scoreOfUser<70){
+                    gradeResult.value = "B - Good 🙂"
+                }
+                else if(scoreOfUser>=70 && scoreOfUser<100){
+                    gradeResult.value = "A - Excellent 😀"
+                    songExcellent.play()
+                }
+                else if(scoreOfUser<0 || scoreOfUser>100){
+                    gradeResult.value = "Out Of Range"
+                }
+            }
+        </script>
+    </body>
 </html>
