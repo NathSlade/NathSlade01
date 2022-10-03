@@ -1,0 +1,49 @@
+* {
+    /* border: 1px solid red; */
+}
+
+.navbar {
+    background-color: #17678E;
+}
+
+#hero2 {
+    background-color: #122F50;
+}
+.hero1-div {
+    background-color: #f7f7f7;
+}
+.text-primary:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.footer p {
+    font-size: 1.2em;
+}
+.footer p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#check {
+    font-size: 0.8em;
+}
+.btn{
+    background-color: #DB3A5F;
+}
+.btn:hover {
+    background-color: #c91f47;
+}
+.bg-blue {
+    background-color: #122F50;
+}
+.d-block .d-flex #color-white {
+    fill: #fff;
+}
+
+.navbar-nav {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
